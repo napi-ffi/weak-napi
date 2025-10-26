@@ -55,7 +55,7 @@ Here's an example of calling a `cleanup()` function on a Object after it gets
 garbage collected:
 
 ``` js
-var weak = require('weak-napi')
+var weak = require('@napi-ffi/weak-napi')
 
 // we are going to "monitor" this Object and invoke "cleanup"
 // before the object is garbage collected
@@ -100,7 +100,7 @@ work really well for this:
 
 ``` js
 var http = require('http')
-  , weak = require('weak-napi')
+  , weak = require('@napi-ffi/weak-napi')
 
 http.createServer(function (req, res) {
   weak(req, gcReq)
