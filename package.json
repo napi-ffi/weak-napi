@@ -4,7 +4,10 @@
     "Ben Noordhuis <info@bnoordhuis.nl>",
     "Nathan Rajlich <nathan@tootallnate.net>"
   ],
-  "name": "weak-napi",
+  "maintainers": [
+    "Gilson Urbano <hello@gilsonurbano.com>"
+  ],
+  "name": "@napi-ffi/weak-napi",
   "license": "MIT",
   "description": "Make weak references to JavaScript Objects.",
   "keywords": [
@@ -20,7 +23,7 @@
   "version": "2.0.2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/node-ffi-napi/weak-napi.git"
+    "url": "git://github.com/napi-ffi/weak-napi.git"
   },
   "main": "lib/weak.js",
   "scripts": {
@@ -32,7 +35,7 @@
   "dependencies": {
     "node-addon-api": "^3.0.0",
     "node-gyp-build": "^4.2.1",
-    "setimmediate-napi": "^1.0.3"
+    "@napi-ffi/setimmediate-napi": "^1.0.6"
   },
   "devDependencies": {
     "mocha": "^7.1.1",

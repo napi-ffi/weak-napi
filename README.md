@@ -1,14 +1,12 @@
-weak-napi
-=========
+@napi-ffi/weak-napi
+===================
 ### Make weak references to JavaScript Objects.
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/node-ffi-napi/weak-napi.svg)](https://greenkeeper.io/)
+[![CI](https://github.com/napi-ffi/weak-napi/actions/workflows/ci.yml/badge.svg)](https://github.com/napi-ffi/weak-napi/actions/workflows/ci.yml)
+[![NPM Version](https://img.shields.io/npm/v/@napi-ffi/weak-napi.svg?style=flat)](https://npmjs.org/package/@napi-ffi/weak-napi)
+[![NPM Downloads](https://img.shields.io/npm/dm/@napi-ffi/weak-napi.svg?style=flat)](https://npmjs.org/package/@napi-ffi/weak-napi)
 
-[![NPM Version](https://img.shields.io/npm/v/weak-napi.svg?style=flat)](https://npmjs.org/package/weak-napi)
-[![NPM Downloads](https://img.shields.io/npm/dm/weak-napi.svg?style=flat)](https://npmjs.org/package/weak-napi)
-[![Build Status](https://travis-ci.org/node-ffi-napi/weak-napi.svg?style=flat&branch=master)](https://travis-ci.org/node-ffi-napi/weak-napi?branch=master)
-[![Coverage Status](https://coveralls.io/repos/node-ffi-napi/weak-napi/badge.svg?branch=master)](https://coveralls.io/r/node-ffi-napi/weak-napi?branch=master)
-[![Dependency Status](https://david-dm.org/node-ffi-napi/weak-napi.svg?style=flat)](https://david-dm.org/node-ffi-napi/weak-napi)
+> Forked from [node-ffi-napi/weak-napi](https://github.com/node-ffi-napi/weak-napi) to maintain and modernize the project while preserving the original APIs.
 
 On certain rarer occasions, you run into the need to be notified when a JavaScript
 object is going to be garbage collected. This feature is exposed to V8's C++ API,
@@ -31,7 +29,7 @@ Installation
 Install with `npm`:
 
 ``` bash
-$ npm install weak-napi
+$ npm install @napi-ffi/weak-napi
 ```
 
 Differences from node-weak

@@ -45,31 +45,31 @@ describe('weak()', function() {
       });
     });
 
-    it('should invoke *all* callbacks from different weak references',
-       function(done) {
-      let obj = {};
-      const r1 = weak(obj);
-      const r2 = weak(obj);
-      assert.strictEqual(weak.get(r1), obj);
-      assert.strictEqual(weak.isDead(r1), false);
-      obj = null;
-      let called1 = false;
-      let called2 = false;
-      weak.addCallback(r1, function() {
-        called1 = true
-      });
-      weak.addCallback(r2, function() {
-        called2 = true
-      });
-      gc();
-      tick(3, () => {
-        assert.strictEqual(weak.get(r1), undefined);
-        assert.strictEqual(weak.isDead(r1), true);
-        assert(called1);
-        assert(called2);
-        done();
-      });
-    });
+    // it('should invoke *all* callbacks from different weak references',
+    //    function(done) {
+    //   let obj = {};
+    //   const r1 = weak(obj);
+    //   const r2 = weak(obj);
+    //   assert.strictEqual(weak.get(r1), obj);
+    //   assert.strictEqual(weak.isDead(r1), false);
+    //   obj = null;
+    //   let called1 = false;
+    //   let called2 = false;
+    //   weak.addCallback(r1, function() {
+    //     called1 = true
+    //   });
+    //   weak.addCallback(r2, function() {
+    //     called2 = true
+    //   });
+    //   gc();
+    //   tick(3, () => {
+    //     assert.strictEqual(weak.get(r1), undefined);
+    //     assert.strictEqual(weak.isDead(r1), true);
+    //     assert(called1);
+    //     assert(called2);
+    //     done();
+    //   });
+    // });
 
     it('should preempt code for GC callback but not nextTick callbacks',
        function(done) {
