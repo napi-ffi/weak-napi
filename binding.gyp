@@ -2,7 +2,7 @@
   'targets': [{
     'target_name': 'weakref',
     'sources': [ 'src/weakref.cc' ],
-    'include_dirs': ["<!(node -p \"require('node-addon-api').include\")",
+    'include_dirs': ["<!@(node -p \"require('node-addon-api').include\")",
                      "<!@(node -p \"require('@napi-ffi/setimmediate-napi').include\")"],
     'dependencies': ["<!(node -p \"require('node-addon-api').gyp\")"],
     'cflags!': [ '-fno-exceptions' ],
